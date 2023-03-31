@@ -3,11 +3,11 @@
 module carry_look_ahead_adder(
     input [3:0] A,B,
     input cin,
-    output [3:0] s,
-    output [3:0] c,
     output [4:0] finalsum //final sum is the result which includes carry out bit with the sum bits
     );
+    wire [3:0] s,c;
     wire [3:0] g,p;
+    
     assign g = A&B;
     assign p = A^B;
     assign c[0] = g[0]|(cin&p[0]);
