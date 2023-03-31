@@ -1,12 +1,11 @@
 `timescale 1ns / 1ps
 
-module carry_look_ahead_adder_tb();
+module CLA_tb();
     reg [3:0] A,B;
     reg cin;
-    wire [3:0] s,c;
     wire [4:0] finalsum;
     
-carry_look_ahead_adder uut(A,B,cin,s,c,finalsum);
+carry_look_ahead_adder uut(A,B,cin,finalsum);
 initial begin
     A=4'd0; B=4'd0; cin=0;
     
